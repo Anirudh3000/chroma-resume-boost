@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Build from "./pages/Build";
 import Preview from "./pages/Preview";
 import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar";
 
 // Create a query client with simple configuration
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => {
         
         {/* Router setup */}
         <BrowserRouter>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/build" element={<Build />} />
